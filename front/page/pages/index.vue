@@ -68,13 +68,15 @@ body {
    .v-card{width: 400px;
   height: 450px;
   text-align: center;
-  margin: 10px;
-  
+
+  border-radius: 30px;
 }
  .v-row{ margin-left: 150px;} 
 v-col{ align-items: center;}
 .v-row{ display: flex;align-items: center;;flex-direction: row;}
 .v-img{
-  margin: 20px;
+
+  border-radius: 20px;
+  height: 55%;
 }
 </style>
