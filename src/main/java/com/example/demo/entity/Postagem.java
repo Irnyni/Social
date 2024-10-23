@@ -15,6 +15,7 @@ public class Postagem {
   private Long id;
   private String titulo;
   private String conteudo;
+  private String imagem;
 public Long getId() {
     return id;
 }
@@ -32,6 +33,12 @@ public String getConteudo() {
 }
 public void setConteudo(String conteudo) {
     this.conteudo = conteudo;
+}
+public String getImagem() {
+    return imagem;
+}
+public void setImagem(String imagem) {
+    this.imagem = imagem;
 }
 public Postagem() {
 }

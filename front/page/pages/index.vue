@@ -22,6 +22,7 @@
             </v-card-text>
              
             </v-card-text>
+            <v-img :src="item.imagem"></v-img>
           </v-card>
         </v-col>
       </v-row>
@@ -54,29 +55,26 @@ export default {
 
 <style scoped>
 .corpo{
-display: flex;
-  flex-direction: column;
+  display: flex;
   background-color: rgb(255, 255, 255);
-  padding: 30px;
-  width: 1900px;
-
-  
-
-  
-  
- 
 }
-    body{
-      color:black
-    }
+body {
+    font-family: Arial, sans-serif;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: #333;
+
+}
    .v-card{width: 400px;
   height: 450px;
   text-align: center;
-   
+  margin: 10px;
   
-
 }
-.v-row{ align-self: center;}
-.v-col{ align-self: center;}
-/* Adicione estilos aqui se necessário */
+ .v-row{ margin-left: 150px;} 
+v-col{ align-items: center;}
+.v-row{ display: flex;align-items: center;;flex-direction: row;}
+.v-img{
+  margin: 20px;
+}
 </style>
