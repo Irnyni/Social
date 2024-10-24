@@ -14,13 +14,13 @@
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/">home</a>
+          <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">produtos</a>
+          <a class="nav-link" href="/videos">Vídeos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">sobre</a>
+          <a class="nav-link" href="/">Sobre</a>
         </li>
       </ul>
       <form class="d-flex">
