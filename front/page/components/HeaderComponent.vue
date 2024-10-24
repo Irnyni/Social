@@ -5,9 +5,9 @@
    
   <header class="header">
  
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-red">
   <div class="container-fluid">
-    <a class="navbar-brand" href="javascript:void(0)">Dapos</a>
+    <a class="navbar-brand" href="javascript:void(0)">VIDEOS</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,8 +24,8 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="text" placeholder="Search">
-        <button class="btn btn-primary" type="button">Search</button>
+        <input class="form-control me-2" type="text" placeholder="O que deseja ver agora?">
+        <button class="btn btn-primary" type="button">Buscar video</button>
       </form>
     </div>
   </div>
