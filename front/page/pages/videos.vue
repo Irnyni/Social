@@ -1,6 +1,6 @@
 <template>
 
-  <cab><h1>VIDEOS</h1></cab>
+  <cab><h1>VÍDEOS</h1></cab>
       
   <div class="corpo">
    <!-- <pre>{{ items }}</pre>  Mostra o conteúdo bruto de items -->
@@ -22,11 +22,11 @@
           <v-card>
     <v-row>    <div class="intro">
     
-    <v-card-text style="font-size: 35px;font-weight: bolder;">
+    <v-card-text style="font-size: 35px;font-weight: bolder; border-right: 0.1px solid #000000;">
             {{ item.titulo }}
           </v-card-text>
       <div> <v-card-text style="font-size: 20px;">
-            Descrição: {{ item.descricao }}
+            {{ item.descricao }}
           </v-card-text></div>
            
      
@@ -154,10 +154,9 @@ background-color: #000000;
     display: flex;
     justify-content: space-between;
     text-align: center;
-    padding: 20px
+    padding: 30px
     
 
 }
-
 
 </style>
