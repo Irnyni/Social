@@ -20,14 +20,22 @@
            
         >
           <v-card>
-
-            <v-card-text style="font-size: 35px;">
-              {{ item.titulo }}
-              <v-card-text style="font-size: 20px;">
-              {{ item.descricao }}
-            </v-card-text>
+    <v-row>    <div class="intro">
+    
+    <v-card-text style="font-size: 35px;font-weight: bolder;">
+            {{ item.titulo }}
           </v-card-text>
-            <div class="imagem">
+      <div> <v-card-text style="font-size: 20px;">
+            Descrição: {{ item.descricao }}
+          </v-card-text></div>
+           
+     
+
+
+  </div></v-row>
+
+
+    <div class="imagem">
               <v-img :src="item.capa"></v-img>
             </div>
            
@@ -35,17 +43,18 @@
 <div class="dados">
 
   <v-card-text style="font-size: 20px;">
-              {{ item.duracao }}
-            </v-card-text>
-            <v-card-text style="font-size: 20px;">
-              {{ item.curtidas }}
-            </v-card-text>
-            <v-card-text style="font-size: 20px;">
-              {{ item.deslikes }}
-            </v-card-text>
-            <v-card-text style="font-size: 20px;">
-              {{ item.compartilhamento }}
-            </v-card-text>
+      <v-icon>mdi-clock</v-icon> Tempo: {{ item.duracao }} Min
+    </v-card-text>
+    <v-card-text style="font-size: 20px;">
+      <v-icon>mdi-thumb-up</v-icon> Likes: {{ item.curtidas }}
+    </v-card-text>
+    <v-card-text style="font-size: 20px;">
+      <v-icon>mdi-thumb-down</v-icon> Deslikes: {{ item.deslikes }}
+    </v-card-text>
+    <v-card-text style="font-size: 20px;">
+      <v-icon>mdi-share</v-icon> Shares: {{ item.compartilhamento }}
+    </v-card-text>
+           
 </div>
       
             
@@ -95,11 +104,12 @@ body {
    .v-card{width:1100px;
 
   text-align: center;
-
-
-  border-radius: 30px;
+  margin-bottom: 70px;
+  margin-left: 250px;
+  border-radius: 40px;
+ 
 }
- .v-row{ margin-left: 150px;} 
+
 v-col{ align-items: center;}
 .v-row{ display: flex;align-items: center;;flex-direction: row;}
 .v-img{
@@ -108,9 +118,9 @@ v-col{ align-items: center;}
   object-fit: cover;
 
 
-  border-radius: 20px;
+  border-radius: 40px;
   background-size: cover;
-  
+ 
 
 }
 cab{ text-align: center;
@@ -119,17 +129,35 @@ cab{ text-align: center;
 
 h1{
 
-  font-size: 90px;
+  font-size: 120px;
   font-family:monospace;
 }
 .imagem{
 background-color: #000000;
   background-size: cover; /* Preencher o card */
   object-fit: cover;
- margin-bottom: 20px;
+  
+
+ 
 }
 .dados{
 
   display: flex;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #ffffffa9;
+  font-weight: bolder;
+  color: #420000;
+  
 }
+.intro{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px
+    
+
+}
+
+
 </style>
