@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.Postagem;
 import com.example.demo.entity.Video;
 import com.example.demo.services.VideoService;
 import java.util.List;
@@ -34,15 +36,14 @@ public class VideoController {
          
      }
      
-     @PutMapping("path/{id}")
-     public String putMethodName(@PathVariable String id, @RequestBody String entity) {
-         //TODO: process PUT request
+     @PutMapping("/{id}")
+     public Video editar(@PathVariable Long id, @RequestBody Video videoAntigo) {
+         Video videoNovo= videoService.atualizarVideo(id, videoAntigo);
+         return videoNovo;
          
-         return entity;
      }
      
-
-    
+   
 
 
 }

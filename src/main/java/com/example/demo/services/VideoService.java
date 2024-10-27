@@ -27,6 +27,12 @@ public class VideoService {
         return videoRepo.save(video);
 
     }
+
+    public Video atualizarVideo(Long id,Video videoatt){
+
+          return videoRepo.save(videoatt);
+
+    }
    
        
 

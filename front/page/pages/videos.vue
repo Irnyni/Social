@@ -137,6 +137,7 @@ background-color: #000000;
   background-size: cover; /* Preencher o card */
   object-fit: cover;
   
+  
 
  
 }
