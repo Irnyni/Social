@@ -35,9 +35,11 @@
   </div></v-row>
 
 
-    <div class="imagem">
-              <v-img :src="item.capa"></v-img>
-            </div>
+  <div class="imagem">
+  <v-img :src="item.capa"></v-img>
+  <div class="overlay"></div>
+</div>
+
            
 
 <div class="dados">
@@ -132,15 +134,7 @@ h1{
   font-size: 120px;
   font-family:monospace;
 }
-.imagem{
-background-color: #000000;
-  background-size: cover; /* Preencher o card */
-  object-fit: cover;
-  
-  
 
- 
-}
 .dados{
 
   display: flex;
@@ -159,5 +153,27 @@ background-color: #000000;
     
 
 }
+.imagem {
+  position: relative; 
+  background-color: #000000;
+  background-size: cover;
+  overflow: hidden; 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0; 
+  transition: opacity 0.4s; 
+}
+
+.imagem:hover .overlay {
+  opacity: 6; 
+}
+
 
 </style>
