@@ -157,7 +157,7 @@ h1{
   position: relative; 
   background-color: #000000;
   background-size: cover;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .overlay {
