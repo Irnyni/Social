@@ -1,7 +1,7 @@
 <template>
     <div class="formsss">
         <cab><h1>ADICIONAR VÍDEO</h1></cab>
-        <v-sheet class="mx-auto" width="70%" >
+        <v-sheet class="mx-auto" width="60%" >
     <v-form fast-fail @submit.prevent>
         <v-text-field
         v-model="Título"
@@ -14,7 +14,7 @@
 
       <v-file-input prepend-icon="mdi-camera"  clearable label="Envie uma imagem de capa" variant="outlined"></v-file-input>
       <v-file-input  prepend-icon="mdi-video"  clearable label="Carregar video" variant="outlined"></v-file-input>
-      <v-btn class="mt-2" type="submit"  block>Submit</v-btn>
+      <v-btn class="mt-12" type="submit"  block>Submit</v-btn>
     </v-form>
   </v-sheet>
     </div>
@@ -32,6 +32,7 @@
 }
 .v-input{
     margin: 30px;
+    padding: 20px;
 }
 .mt-2 {
     width: 100px; /* Adjust this value to your preference */
