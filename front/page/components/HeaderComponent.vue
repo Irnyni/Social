@@ -5,7 +5,7 @@
    
   <header class="header">
  
-    <nav class="navbar navbar-expand-sm navbar-dark bg-red">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-black">
   <div class="container-fluid">
     <a class="navbar-brand" href="javascript:void(0)">VIDEOS</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -20,7 +20,7 @@
           <a class="nav-link" href="/videos">Vídeos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">Sobre</a>
+          <a class="nav-link" href="/criarVideo">Criar</a>
         </li>
       </ul>
       <form class="d-flex">
