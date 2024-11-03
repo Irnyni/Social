@@ -2,18 +2,23 @@
     <div class="formsss">
         <cab><h1>ADICIONAR VÍDEO</h1></cab>
         <v-sheet class="mx-auto" width="60%" >
-    <v-form fast-fail @submit.prevent>
+    <v-form fast-fail @submit.prevent="submitForm">
         <v-text-field
-        v-model="Título"
+        v-model="titulo"
         label="Título"
       ></v-text-field>
       <v-text-field
-        v-model="Descrição"
-        label="Descrição"
+        v-model="conteudo"
+        label="Conteúdo"
+      ></v-text-field>
+      <v-text-field
+        v-model="imagem"
+        label="Imagem"
       ></v-text-field>
 
-      <v-file-input prepend-icon="mdi-camera"  clearable label="Envie uma imagem de capa" variant="outlined"></v-file-input>
-      <v-file-input  prepend-icon="mdi-video"  clearable label="Carregar video" variant="outlined"></v-file-input>
+
+      <!-- <v-file-input prepend-icon="mdi-camera"  clearable label="Envie uma imagem de capa" variant="outlined"></v-file-input>
+      <v-file-input  prepend-icon="mdi-video"  clearable label="Carregar video" variant="outlined"></v-file-input> -->
       <v-btn class="mt-12" type="submit"  block>Submit</v-btn>
     </v-form>
   </v-sheet>
@@ -21,7 +26,34 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import axios from 'axios';
 
+const titulo = ref('');
+const conteudo = ref('');
+const imagem = ref('');
+
+
+const submitForm = async () => {
+  try {
+    const DADOS = {
+        titulo: titulo.value,
+        conteudo: conteudo.value,
+        imagem: imagem.value
+    };
+
+    const response = await axios.post('http://localhost:8077/Postagens', DADOS, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    console.log('Dados enviados com sucesso:', response.data);
+} catch (error) {
+    console.error('Erro ao enviar dados:', error);
+}
+
+};
 </script>
 
 <style  scoped>
