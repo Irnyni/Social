@@ -46,6 +46,7 @@ export default {
   color: white;
 
   text-align: left;
+
   
 }
 

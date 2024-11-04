@@ -17,8 +17,8 @@
       ></v-text-field>
 
 
-      <!-- <v-file-input prepend-icon="mdi-camera"  clearable label="Envie uma imagem de capa" variant="outlined"></v-file-input>
-      <v-file-input  prepend-icon="mdi-video"  clearable label="Carregar video" variant="outlined"></v-file-input> -->
+      <v-file-input prepend-icon="mdi-camera"  clearable label="Envie uma imagem de capa" variant="outlined"></v-file-input>
+      <v-file-input  prepend-icon="mdi-video"  clearable label="Carregar video" variant="outlined"></v-file-input>
       <v-btn class="mt-12" type="submit"  block>Submit</v-btn>
     </v-form>
   </v-sheet>
@@ -48,7 +48,14 @@ const submitForm = async () => {
         }
     });
 
+   
+    
+    
     console.log('Dados enviados com sucesso:', response.data);
+    titulo.value = '';
+    capa.value = '';
+    descricao.value = '';
+
 } catch (error) {
     console.error('Erro ao enviar dados:', error);
 }
