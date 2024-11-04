@@ -42,10 +42,16 @@ export default {
 
 <style scoped>
 .header {
-  background:rgb(255, 255, 255);
-  color: white;
 
-  text-align: left;
+  position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0; /* Alinha ao topo da página */
+    left: 0;
+    width: 100%; /* Largura total da página */
+    background-color: white; /* Cor de fundo do cabeçalho */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    z-index: 1000; /* Certifica-se de que o cabeçalho fica acima do conteúdo */
+     text-align: left;
+     margin-bottom: 20px;
 
   
 }

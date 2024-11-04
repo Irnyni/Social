@@ -22,7 +22,8 @@
   
   <style>
   .content-container {
-    margin: 20px 0; /* Ajuste o valor conforme necessário */
+    margin: 30px 0; 
+    margin-top: 100px;
   }
   </style>
   
