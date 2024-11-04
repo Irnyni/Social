@@ -8,12 +8,12 @@
         label="Título"
       ></v-text-field>
       <v-text-field
-        v-model="conteudo"
-        label="Conteúdo"
+        v-model="capa"
+        label="Capa"
       ></v-text-field>
       <v-text-field
-        v-model="imagem"
-        label="Imagem"
+        v-model="descricao"
+        label="Descrição"
       ></v-text-field>
 
 
@@ -30,19 +30,19 @@ import { ref } from 'vue';
 import axios from 'axios';
 
 const titulo = ref('');
-const conteudo = ref('');
-const imagem = ref('');
+const capa = ref('');
+const descricao = ref('');
 
 
 const submitForm = async () => {
   try {
     const DADOS = {
         titulo: titulo.value,
-        conteudo: conteudo.value,
-        imagem: imagem.value
+        capa: capa.value,
+        descricao: descricao.value
     };
 
-    const response = await axios.post('http://localhost:8077/Postagens', DADOS, {
+    const response = await axios.post('http://localhost:8077/Videos', DADOS, {
         headers: {
             'Content-Type': 'application/json'
         }
