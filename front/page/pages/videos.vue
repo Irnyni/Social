@@ -38,6 +38,7 @@
   <div class="imagem">
   <v-img :src="item.capa"></v-img>
   <div class="overlay"></div>
+  <v-btn class="mt-12" @click="deleteVideo(item.id)" block color="red">Excluir</v-btn>
 </div>
 
            
@@ -85,10 +86,29 @@ export default {
     console.log(this.items); // Adicione este log para verificar os dados
   } catch (error) {
     console.error('Erro ao buscar itens:', error);
-  }
-}
+  };
+  
+},
+ methods:{
+      async deleteVideo(id) {
+          try {
+            // Solicitação DELETE para excluir o vídeo
+            const response = await fetch(`http://localhost:8077/Videos/${id}`, {
+              method: 'DELETE',
+            });
 
-}
+            if (response.ok) {
+              // Remover o item localmente após a exclusão
+              this.items = this.items.filter(item => item.id !== id);
+              console.log(`Vídeo com ID ${id} excluído com sucesso.`);
+            } else {
+              console.error('Erro ao excluir o vídeo:', response.statusText);
+            }
+          } catch (error) {
+            console.error('Erro ao excluir o vídeo:', error);
+          }}
+        }
+};
 </script>
 
 <style scoped>

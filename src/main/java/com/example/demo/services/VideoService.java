@@ -33,6 +33,11 @@ public class VideoService {
           return videoRepo.save(videoatt);
 
     }
+
+    public void delete(Long id) {
+        videoRepo.deleteById(id);
+       
+    }
    
        
 

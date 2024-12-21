@@ -6,6 +6,7 @@ import com.example.demo.entity.Video;
 import com.example.demo.services.VideoService;
 import java.util.List;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,6 +36,14 @@ public class VideoController {
         return videoService.criarvideo(video);
          
      }
+
+     @DeleteMapping("/{id}")
+        public void delete (@PathVariable Long id){
+            videoService.delete(id);
+
+        }
+
+     
      
      @PutMapping("/{id}")
      public Video editar(@PathVariable Long id, @RequestBody Video videoAntigo) {
