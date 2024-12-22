@@ -5,6 +5,8 @@ import com.example.demo.entity.Postagem;
 import com.example.demo.entity.Video;
 import com.example.demo.services.VideoService;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -30,6 +34,8 @@ public class VideoController {
      public List<Video> listar() {
          return videoService.listar();
      }
+
+     
 
      @PostMapping
      public Video criar(@RequestBody Video video) {
@@ -52,6 +58,10 @@ public class VideoController {
          
      }
      
+   @GetMapping("/{id}")
+   public Optional<Video> getVideoById(@PathVariable Long id) {
+       return videoService.getVideoById(id);
+   }
    
 
 
