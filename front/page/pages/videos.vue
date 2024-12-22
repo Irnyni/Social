@@ -33,15 +33,19 @@
 
 
   </div></v-row>
-
-
   <div class="imagem">
   <v-img :src="item.capa"></v-img>
   <div class="overlay"></div>
   <v-btn class="mt-12" @click="deleteVideo(item.id)" block color="red">Excluir</v-btn>
-</div>
 
-           
+
+ 
+</div>
+<v-btn :href="'/editarVideo' + item.id" >Editar</v-btn>
+
+
+
+ 
 
 <div class="dados">
 
@@ -106,8 +110,25 @@ export default {
             }
           } catch (error) {
             console.error('Erro ao excluir o vídeo:', error);
-          }}
+          }},
+          async editVideo(id) {
+      try {
+        const response = await fetch(`http://localhost:8077/Videos/${id}`, {
+          method: 'PUT', // Para edição, o método deve ser PUT
+        });
+
+        if (response.ok) {
+          // Após editar, remova o item da lista localmente
+          this.items = this.items.filter(item => item.id !== id);
+          console.log(`Vídeo com ID ${id} editado com sucesso.`);
+        } else {
+          console.error('Erro ao editar o vídeo:', response.statusText);
         }
+      } catch (error) {
+        console.error('Erro ao editar o vídeo:', error);
+      }
+    }
+  }
 };
 </script>
 
