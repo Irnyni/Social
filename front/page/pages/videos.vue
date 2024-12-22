@@ -19,7 +19,7 @@
           
            
         >
-          <v-card>
+    <v-card>
     <v-row>    <div class="intro">
     
     <v-card-text style="font-size: 35px;font-weight: bolder; border-right: 0.1px solid #000000;">

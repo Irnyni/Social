@@ -28,7 +28,8 @@
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
-
+const route = useRoute();
+const router = useRouter();
 const titulo = ref('');
 const capa = ref('');
 const descricao = ref('');
@@ -55,7 +56,7 @@ const submitForm = async () => {
     titulo.value = '';
     capa.value = '';
     descricao.value = '';
-
+    router.push('/videos');
 } catch (error) {
     console.error('Erro ao enviar dados:', error);
 }

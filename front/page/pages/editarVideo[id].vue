@@ -21,7 +21,7 @@
                 <v-file-input prepend-icon="mdi-camera"  clearable label="Envie uma imagem de capa" variant="outlined"></v-file-input>
                 <v-file-input prepend-icon="mdi-video"  clearable label="Carregar video" variant="outlined"></v-file-input>
 
-                <v-btn class="mt-12" type="submit" block>Submit</v-btn>
+                <v-btn class="mt-12"  type="submit" block>Submit</v-btn>
             </v-form>
         </v-sheet>
     </div>
@@ -41,6 +41,7 @@ const id = ref(null);  // Armazenar o id do vídeo
 
 // Usando useRoute para pegar o id da URL
 const route = useRoute();
+const router = useRouter();
 id.value = route.params.id;  // Pega o id da URL
 
 // Quando o componente for montado, busque os dados do vídeo para edição
@@ -81,9 +82,11 @@ const submitForm = async () => {
         titulo.value = '';
         capa.value = '';
         descricao.value = '';
+       
     } catch (error) {
         console.error('Erro ao enviar dados:', error);
     }
+    router.push('/videos');
 };
 </script>
 
