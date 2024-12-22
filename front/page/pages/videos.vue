@@ -149,7 +149,7 @@ body {
   text-align: center;
   margin-bottom: 70px;
   margin-left: 250px;
-  border-radius: 40px;
+  border-radius: 20px;
  
 }
 
@@ -160,8 +160,6 @@ v-col{ align-items: center;}
   min-width: 100%;
   object-fit: cover;
 
-
-  border-radius: 40px;
   background-size: cover;
  
 

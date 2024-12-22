@@ -2,21 +2,26 @@
     <div class="formsss">
         <cab><h1>EDITAR VÍDEO</h1></cab>
         
-        <v-sheet class="mx-auto" width="60%" >
+        <v-sheet class="mx-auto" width="70%" >
             <v-form fast-fail @submit.prevent="submitForm">
                 <v-text-field
                     v-model="titulo"
                     label="Título"
                 ></v-text-field>
-                <v-img :src="capa.value"></v-img>
-                <v-text-field
-                    v-model="capa"
-                    label="Capa"
-                ></v-text-field>
                 <v-text-field
                     v-model="descricao"
                     label="Descrição"
                 ></v-text-field>
+                <div class="imagem">
+  <v-img :src="capa"></v-img>
+  <div class="overlay"></div>
+
+</div>
+                <v-text-field
+                    v-model="capa"
+                    label="Capa"
+                ></v-text-field>
+                
 
                 <v-file-input prepend-icon="mdi-camera"  clearable label="Envie uma imagem de capa" variant="outlined"></v-file-input>
                 <v-file-input prepend-icon="mdi-video"  clearable label="Carregar video" variant="outlined"></v-file-input>
@@ -93,7 +98,7 @@ const submitForm = async () => {
 <style scoped>
 .mx-auto {
     margin: 80px;
-    align-self: flex-start;
+    
 }
 
 .v-input {
@@ -104,21 +109,12 @@ const submitForm = async () => {
 .mt-2 {
     width: 100px;
 }
-.imagem {
-  position: relative; 
-  background-color: #000000;
-  background-size: cover;
-  overflow: hidden;
-}
-.v-img{
-  max-height: 650px;
-  min-width: 100%;
-  object-fit: cover;
 
-
-  border-radius: 40px;
-  background-size: cover;
- 
-
+.v-img {
+    width: 70%;
+    border-radius: 20px;
+    display: block;        
+    margin-left: auto;     
+    margin-right: auto;    
 }
 </style>
