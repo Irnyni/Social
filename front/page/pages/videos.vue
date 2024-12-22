@@ -36,7 +36,7 @@
   <div class="imagem">
   <v-img :src="item.capa"></v-img>
   <div class="overlay"></div>
-  <v-btn class="mt-12" @click="deleteVideo(item.id)" block color="red">Excluir</v-btn>
+  <!-- <v-btn class="mt-12" @click="deleteVideo(item.id)" block color="red">Excluir</v-btn> -->
 
 
  
